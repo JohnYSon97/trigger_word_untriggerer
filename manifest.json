@@ -1,0 +1,31 @@
+{
+"manifest_version": 2,
+    "name": "Trigger Word Un-Triggerer",
+
+    "description": "As our society becomes more and more aware of the different issues that individuals have, it brings light to 
+     certain sensitive words or phrases, known as trigger words or phrases, may bring back negative experiences or feelings towards 
+     a past experiecne or feelings. Thus, this extension hopes to nullify the bad sentiments and feelings that come with those words 
+     or phrases by replacing them with the nonsense words from the popular television show 'Rick and Morty.' In doing so, we are not
+     promoting a lessened freedom or speech or the running away from problems or even censorship at all, in fact we are promoting the 
+     exact opposite. By allowing these words to still be present, just not in their emotion inducing, sensitive state, conversation 
+     and discussion can be opened about these sensitive or taboo topics in an environment that is safe and comfortable for all
+     participants. Currently, we only have functionality for 'un-triggering' the word 'rape' and it's variations but we will soon add
+     in the functionality of being able to add and modify words that one would want 'un-triggered.' Enjoy!",
+
+    "browser_action": {
+        "default_icon" : "SUNglasses.png"
+    }, 
+
+    "version": "1.1",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
